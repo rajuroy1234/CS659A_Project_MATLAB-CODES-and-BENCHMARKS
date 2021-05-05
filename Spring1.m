@@ -1,4 +1,4 @@
-%% Defining the plant dynamics 
+%% Defining the plant dynamics
 
 k1=1;
 k2=3;
