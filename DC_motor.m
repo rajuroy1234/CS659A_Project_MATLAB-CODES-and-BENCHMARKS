@@ -10,12 +10,14 @@ J= 0.03; % kg.m^2
 
 A = [-R/L -Kb/L; Km/J -Kf/J];
 Bu = [1/L; 0];
+Bw=[0; 0; 0];
+
 C = [0 1];
 D = [0];
-
+Dw=0;  
 %%
 % calling the main constructor 
-Sys= STLC_lti(A,Bu,C,D); 
+Sys= STLC_lti(A,Bu,Bw,C,D,Dw); 
 
 %%
 % initial state:
