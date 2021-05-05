@@ -7,14 +7,15 @@ C=0.5;
 A = [0 1/L ;
      -1/C 1/(R*C) ];
 Bu = [0; 1/C ];
+Bw=[0; 0];
 
 C = [0 1 ];
 D=0;           % D=0, here, assuming no direct coupling...
-               % between the current source and the capacitor voltage
+Dw=0;          % between the current source and the capacitor voltage
 
 %%
 % calling the main constructor 
-Sys= STLC_lti(A,Bu,C,D); 
+Sys= STLC_lti(A,Bu,Bw,C,D,Dw); 
 
 %%
 % initial state:
