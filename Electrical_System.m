@@ -10,13 +10,13 @@ A = [0 1/L2 0 ;
      -1/C1 0 -1/C1 ; 
       0 1/L1 -R/L1 ];
 Bu = [0; 1/C1 ; 0 ];
-
+Bw=[0; 0; 0];
 C = [0 1 -R ];
 D=0;
-
+Dw=0;
 %%
 % calling the main constructor 
-Sys= STLC_lti(A,Bu,C,D); 
+Sys= STLC_lti(A,Bu,Bw,C,D,Dw);  
 
 %%
 % initial state:
