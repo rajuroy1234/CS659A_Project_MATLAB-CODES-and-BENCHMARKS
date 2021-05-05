@@ -9,13 +9,16 @@ A = [0 1 0 ;
      -(k1+k2)/m 0 k1/m ; 
      k1/b 0 -k1/b ];
 Bu = [0; 1/m ; 0 ];
+Bw=[0; 0; 0];
 
 C = [0 0 1 ];
 D=0;
+Dw=0;
 
 %%
 % calling the main constructor 
-Sys= STLC_lti(A,Bu,C,D); 
+Sys= STLC_lti(A,Bu,Bw,C,D,Dw); 
+
 
 %%
 % initial state:
